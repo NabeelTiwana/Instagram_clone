@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/Home/homescreen.dart';
+import 'package:instagram_clone/BottomNav/bottomnavscreen.dart';
 import 'package:instagram_clone/Widgets/uihelper.dart';
 
 import '../Signup/signupscreen.dart';
@@ -44,7 +44,7 @@ class LoginScreen extends StatelessWidget {
               onpress: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                  MaterialPageRoute(builder: (context) => BottomNavScreen()),
                 );
               },
               fontSize: 20,
