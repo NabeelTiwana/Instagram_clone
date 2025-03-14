@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/ChatScreen/chatscreen.dart';
 
 class HomeScreen extends StatelessWidget {
   var arrContent = [
@@ -34,7 +35,15 @@ class HomeScreen extends StatelessWidget {
           SizedBox(width: 15),
           Padding(
             padding: const EdgeInsets.only(right: 15),
-            child: Image.asset("assets/images/Messanger.png"),
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ChatScreen()),
+                );
+              },
+              icon: Image.asset('assets/images/Messanger.png'),
+            ),
           ),
         ],
       ),
@@ -135,7 +144,10 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Text(' Nabeel', style: TextStyle(fontWeight: FontWeight.bold)),
                 Text(' and'),
-                Text(' 44,686 others', style: TextStyle(fontWeight: FontWeight.bold)),
+                Text(
+                  ' 44,686 others',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ],
             ),
           ),
